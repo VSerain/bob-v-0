@@ -1,0 +1,7 @@
+{
+    "board": "arduino:avr:nano",
+    "configuration": "cpu=atmega328old",
+    "sketch": "bot.ino",
+    "port": "/dev/ttyUSB0",
+    "output": "9600"
+}

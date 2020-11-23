@@ -1,0 +1,25 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/home/victor/.arduino15/packages/esp8266/hardware/esp8266/2.5.1/**",
+                "/home/victor/.arduino15/packages/esp8266/**",
+                // "/home/victor/ArduinoIED/arduino-1.8.9/hardware/arduino/avr/**",
+                // "/home/victor/ArduinoIED/arduino-1.8.9/tools/**",
+                "/home/victor/Arduino/libraries/**",
+                "/home/victor/Arduino/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "forcedInclude": [
+                // "/home/victor/ArduinoIED/arduino-1.8.9/hardware/arduino/avr/cores/arduino/Arduino.h"
+            ]
+        }
+    ],
+    "version": 4
+}
