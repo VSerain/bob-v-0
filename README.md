@@ -1,2 +1,2 @@
-# bob-v-0
+# Bob v.0
 A little whell robot with arduino
