@@ -13,6 +13,8 @@ class Manager {
         Manager(Head head, AbstarctServo frontWheel, DCMotor leftMotor, DCMotor rightMotor, int debug);
         int loop();
         void turn(int rotation, double speed, double distance);
+        void setMotorsSpeed(double speed);
+
     private:
         int debug;
         Head head;
@@ -20,7 +22,6 @@ class Manager {
         DCMotor leftMotor;
         DCMotor rightMotor;
 
-        void setMotorsSpeed(double speed);
         long computeDelayWithDistance(double distance, double speed);
         double computeDifferentielSpeed(int rotation, int side, double speed);
         double computeDifferentielSpeed(int rotation, int side);

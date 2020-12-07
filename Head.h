@@ -1,4 +1,3 @@
-#include <HCSR04.h>
 #include "./AbstarctServo.h";
 
 #ifndef HEAD_H
@@ -17,7 +16,8 @@ class Head {
         int echoPin;
         int triggerPin;
 
+        double measureDistanceCm();
+        double measureDistanceCm(float temperature);
         AbstarctServo servo = NULL;
-        UltraSonicDistanceSensor distanceSensor;
 };
 #endif

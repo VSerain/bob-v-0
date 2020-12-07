@@ -21,20 +21,21 @@ void DCMotor::load() {
 void DCMotor::stop() {
     digitalWrite(this->_doorAPin, HIGH); 
     digitalWrite(this->_doorBPin, HIGH);
-    delay(250);
 }
 
 void DCMotor::setSpeed(float speed) {
+    float lastSpeed = this->_speed;
     this->_speed = speed;
-    if (speed > 0) {
+    if (speed > 0.2) {
         digitalWrite(this->_doorAPin, HIGH); 
         digitalWrite(this->_doorBPin, LOW);
-    } else if (speed < 0) {
+    } else if (speed < -0.2) {
         digitalWrite(this->_doorAPin, LOW); 
         digitalWrite(this->_doorBPin, HIGH);
     } else {
         this->stop();
     }
+
     analogWrite(this->_speedPin, min(255, (int) abs(speed * (float) 255)));
 }
 

@@ -12,7 +12,6 @@ void AbstarctServo::load() {
 
 void AbstarctServo::rotate(int rotation) {
     this->rotation = rotation;
-
     this->servo.write(90 + this->offset + rotation);
 }
 

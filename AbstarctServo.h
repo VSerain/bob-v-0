@@ -10,11 +10,11 @@ class AbstarctServo {
         void load();
         void rotate(int rotation);
         int getCurrentRotation();
+        int offset;
 
     private: 
         int servoPin;
         int rotation;
-        int offset;
         Servo servo;
 };
 

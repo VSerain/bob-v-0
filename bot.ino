@@ -18,26 +18,21 @@ void setup() {
   leftMotor.load();
   rightMotor.load();
   head.load();
+  frontWheel.offset = -8;
   frontWheel.load();
+
+  
   digitalWrite(bipPin, HIGH);
   delay(500);
   digitalWrite(bipPin, LOW);
-  leftMotor.stop();
-  rightMotor.stop();
 }
 
 void loop() {
-// frontWheel.rotate(0);
-// head.setRotation(0);
-  //Serial.println(head.getDistance(0));
-  // leftMotor.setSpeed(1);
-  // int error = bot.loop();
-
-  // // BIP BIP
-  // for(int i = 0; i < error; i++) {
-  //   digitalWrite(bipPin, HIGH);
-  //   delay(100);
-  //   digitalWrite(bipPin, LOW);
-  // }
-  
+  int error = bot.loop();
+  // BIP BIP
+  for(int i = 0; i < error; i++) {
+    digitalWrite(bipPin, HIGH);
+    delay(100);
+    digitalWrite(bipPin, LOW);
+  }
 }
