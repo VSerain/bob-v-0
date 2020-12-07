@@ -1,7 +1,7 @@
-#include "./DCMotor.h";
-#include "./AbstarctServo.h";
-#include "./Head.h";
-#include "./Manager.h";
+#include "./src/DCMotor.h";
+#include "./src/AbstarctServo.h";
+#include "./src/Head.h";
+#include "./src/Manager.h";
 
 DCMotor leftMotor(6, 4, 9);
 DCMotor rightMotor(11, 10 ,12);
@@ -21,7 +21,6 @@ void setup() {
   frontWheel.offset = -8;
   frontWheel.load();
 
-  
   digitalWrite(bipPin, HIGH);
   delay(500);
   digitalWrite(bipPin, LOW);
